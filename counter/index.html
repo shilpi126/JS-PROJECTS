@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #container{
+            height: 30rem;
+            width: 40rem;
+            background-color: blueviolet;
+            text-align: center;
+            position: absolute;
+            top: 30%;
+            left: 30%;
+        }
+        #container button{
+            width: 10rem;
+            height: 6rem;
+            
+        }
+        button:hover{
+            background-color:rgb(96, 94, 94) ;
+        }
+        #number{
+            font-size: 100px;
+        }
+        .items{
+            margin-top: 15%;
+        }
+
+        #add{
+            font-size: 300%;
+        }
+        #sub{
+            font-size: 300%;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <div class="items">
+        <button id="add">+</button>
+        <div id="number">0</div>
+        <button id="sub">-</button>
+    </div>
+    </div>
+
+    
+    <script>
+
+        let addBtn = document.getElementById('add');
+        let subBtn = document.getElementById('sub');
+        let int = document.getElementById('number');
+        let  count = 0;      
+                
+        addBtn.addEventListener('click', function(){
+            count += 1;
+           
+            int.innerText = count;
+        });
+
+        subBtn.addEventListener('click', function(){
+            if(count == 0){
+                return;
+            }
+            count -= 1;
+           
+            int.innerText = count;
+        });
+
+    </script>
+
+</body>
+</html>
